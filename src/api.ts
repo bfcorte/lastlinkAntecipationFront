@@ -41,3 +41,16 @@ export function statusBadge(status: number | string) {
   if (s === 2 || s === 'rejected') return { className: 'badge status-rejected', label: 'Recusada' }
   return { className: 'badge', label: String(status) }
 }
+export function isoLocalNow(date = new Date()): string {
+  const pad = (n: number) => String(n).padStart(2, '0')
+  const off = -date.getTimezoneOffset()
+  const sign = off >= 0 ? '+' : '-'
+  const hh = pad(Math.floor(Math.abs(off) / 60))
+  const mm = pad(Math.abs(off) % 60)
+  return (
+    `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}` +
+    `T${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}` +
+    `${sign}${hh}:${mm}`
+  )
+}
+
