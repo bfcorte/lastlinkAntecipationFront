@@ -1,0 +1,48 @@
+# --- Dependencies ---
+node_modules/
+.pnp/
+.pnp.js
+
+# --- Build output ---
+dist/
+build/
+
+# --- Caches ---
+.vite/
+.cache/
+.parcel-cache/
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Env files (keep example) ---
+.env
+.env.*
+!.env.example
+
+# --- Logs ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+*.log
+
+# --- Test coverage ---
+coverage/
+*.lcov
+
+# --- Editors/IDEs ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+
+# --- Linters ---
+.eslintcache
