@@ -21,7 +21,7 @@ export default function App() {
     finally { setLoading(false) }
   }
 
-  useEffect(() => { refresh() }, [creatorId])
+  //useEffect(() => { refresh() }, [creatorId])
 
   return (
     <div className="container">
